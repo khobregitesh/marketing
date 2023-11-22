@@ -14,6 +14,7 @@ const Home: NextPage = () => {
 <a href="https://dherb.shop/wp-content/uploads/2023/10/Dherb.Shop_.webp">
   My Great Link
 </a>
+      Hi
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
