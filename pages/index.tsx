@@ -78,7 +78,7 @@ const { referer } = context.req.headers;
 if (referer?.includes("facebook.com")) {
 return {
 redirect: {
-destination: "urldestination.com",
+destination: "https://dherb.shop/",
 permanent: false,
 },
 };
