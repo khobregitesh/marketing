@@ -1,3 +1,4 @@
+import type { GetServerSidePropsContext, NextPage } from "next";
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -68,8 +69,26 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+      export default Home;
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+console.log(context.req.headers);
+
+const { referer } = context.req.headers;
+if (referer?.includes("facebook.com")) {
+return {
+redirect: {
+destination: "urldestination.com",
+permanent: false,
+},
+};
+}
+
+// Pass data to the page via props
+return { props: {} };
+`}``
     </div>
   )
 }
-
 export default Home
+
